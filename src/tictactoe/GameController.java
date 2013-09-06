@@ -69,7 +69,7 @@ public class GameController {
 			@Override
 			public void changed(ObservableValue<? extends Object> observable,
 					Object oldValue, Object newValue) {
-				if (game.getCurrentPlayer() == computerPlayer && game.getGameStatus() == GameStatus.OPEN) {
+				if (game.getCurrentPlayer() == computerPlayer) {// && game.getGameStatus() == GameStatus.OPEN) {
 
 					// Not really necessary to choose the move in a application-threaded task, but this is to 
 					// demonstrate how to implement this for a game where choosing a move may take a long time.

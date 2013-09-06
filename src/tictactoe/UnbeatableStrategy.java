@@ -72,7 +72,7 @@ public class UnbeatableStrategy implements MoveChoosingStrategy {
 						if (!loc.equals(location) && gameState.squareProperty(loc).get()==SquareState.EMPTY) {
 							// Make sure we don't force our opponent to create a fork!
 							if (! createsFork(loc, gameState, opponent)) {
-								return loc ;
+								return location ;
 							}
 						}
 					}

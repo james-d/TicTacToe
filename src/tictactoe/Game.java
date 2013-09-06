@@ -224,7 +224,7 @@ public class Game {
 			squareState.set(SquareState.X);
 			if (gameStatus.get() == GameStatus.OPEN) {
 				currentPlayer.set(oPlayer);
-			}
+			} 
 		} else {
 			squareState.set(SquareState.O);
 			if (gameStatus.get() == GameStatus.OPEN) {
