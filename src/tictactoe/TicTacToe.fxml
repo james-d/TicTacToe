@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import java.util.ArrayList?>
+<?import javafx.scene.layout.StackPane?>
+<?import tictactoe.Square?>
+<?import tictactoe.Player?>
+<?import tictactoe.ComputerPlayer?>
+<?import tictactoe.Game?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" >
+	
+	<top>
+		<MenuBar>
+			<Menu text="Game">
+				<Menu text="New Game">
+					<MenuItem text="Human plays first" onAction="#newGameHumanFirst"/>
+					<MenuItem text="Computer plays first" onAction="#newGameComputerFirst"/>
+				</Menu>
+				<MenuItem text="Quit" onAction="#quit"/>
+			</Menu>
+		</MenuBar>
+	</top>
+	<center>
+		<GridPane fx:id="board" hgap="10" vgap="10" >
+			<styleClass>
+				<String fx:value="tic-tac-toe-board"/>
+			</styleClass>
+		</GridPane>
+
+	</center>
+	<bottom>
+		<VBox>
+			<Label fx:id="statusLabel">
+				<styleClass>
+					<String fx:value="status"/>
+				</styleClass>
+			</Label>
+			<Label fx:id="currentPlayerLabel">
+				<styleClass>
+					<String fx:value="status"/>
+				</styleClass>
+			</Label>
+		</VBox>
+	</bottom>
+
+</BorderPane>

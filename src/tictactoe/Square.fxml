@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml" type="StackPane" onMouseClicked="#makeMove" fx:id="root">
+	<styleClass>
+		<String fx:value="board-grid"/>
+	</styleClass>
+	<Label text="O" fx:id="oLabel">
+		<styleClass>
+			<String fx:value="O"/>
+		</styleClass>
+	</Label>
+	<Label text="X" fx:id="xLabel">
+		<styleClass>
+			<String fx:value="X"/>
+		</styleClass>
+	</Label>
+</fx:root>
