@@ -69,7 +69,7 @@ public class UnbeatableStrategy implements MoveChoosingStrategy {
 				if (count(line, me, gameState)==1 && count(line, opponent, gameState)==0) {
 					// Find the other empty square on this line; this is where we force our opponent to play
 					for (Location loc : line) {
-						if (!loc.equals(location) && gameState.squareProperty(loc).get()==SquareState.EMPTY) {
+						if (!loc.equals(location) && gameState.getSquare(loc)==SquareState.EMPTY) {
 							// Make sure we don't force our opponent to create a fork!
 							if (! createsFork(loc, gameState, opponent)) {
 								return location ;

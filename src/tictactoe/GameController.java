@@ -5,7 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-import tictactoe.Game.GameStatus;
 import javafx.beans.binding.Bindings;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -69,7 +68,7 @@ public class GameController {
 			@Override
 			public void changed(ObservableValue<? extends Object> observable,
 					Object oldValue, Object newValue) {
-				if (game.getCurrentPlayer() == computerPlayer) {// && game.getGameStatus() == GameStatus.OPEN) {
+				if (game.getCurrentPlayer() == computerPlayer) {
 
 					// Not really necessary to choose the move in a application-threaded task, but this is to 
 					// demonstrate how to implement this for a game where choosing a move may take a long time.
@@ -120,5 +119,4 @@ public class GameController {
 		board.getScene().getWindow().hide();
 	}
 
-	
 }

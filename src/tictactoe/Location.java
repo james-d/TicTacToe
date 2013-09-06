@@ -17,7 +17,7 @@ public class Location {
 	 */
 	public Location(int column, int row) {
 		if (column < 0 || column >= 3 || row < 0 || row >= 3) {
-			throw new IllegalArgumentException(String.format("[%d, %d] is not a valid location on the board"));
+			throw new IllegalArgumentException(String.format("[%d, %d] is not a valid location on the board", column, row));
 		}
 		this.column = column ;
 		this.row = row ;

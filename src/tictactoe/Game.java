@@ -164,7 +164,7 @@ public class Game {
 		return board.get(location.getColumn()).get(location.getRow()).getReadOnlyProperty();
 	}
 	
-	private SquareState getSquare(Location location) {
+	public SquareState getSquare(Location location) {
 		return board.get(location.getColumn()).get(location.getRow()).get() ;
 	}
 	
