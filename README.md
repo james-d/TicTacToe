@@ -6,6 +6,9 @@ JavaFX Tic Tac Toe (Human vs Computer) game
 Simple implementation of a Human vs Computer Tic-Tac-Toe (Noughts and Crosses) game written in Java with JavaFX
 as the UI Toolkit. Compiled under Java 1.7.0_25 using E(fx)clipse. Tested on Mac OS X 10.7.5.
 
+The algorithm for implementing the computer player's strategy was based on 
+http://www.eecs.berkeley.edu/~bh/ssch10/ttt.html
+
 The game is written using a fairly strict MVC approach. The Game class represents the state of the game (players, 
 state of each square, won/drawn/still-paying state, etc) with various state represented by JavaFX observable properties.
 The UI is defined by two FXML files: TicTacToe.fxml (for the overall UI) and Square.fxml (which is used to create each
