@@ -21,5 +21,7 @@ effectively instantaneous from the viewpoint of the user; however this demonstra
 complex games.
 
 Limitations:
+
 1. Not tested outside the development environment (JDK 1.7.0_25 and JDK 1.8.0 b103 on Mac OS X 10.7.5).
+
 2. Computer cannot be beaten, so this gets boring quickly.
