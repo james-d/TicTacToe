@@ -13,7 +13,7 @@ public class TicTacToe extends Application {
 	public void start(final Stage primaryStage) throws IOException {
 		
 		final Player humanPlayer = new Player("Human");
-		final ComputerPlayer computerPlayer = new ComputerPlayer(new UnbeatableStrategy());
+		final ComputerPlayer computerPlayer = new ComputerPlayer("Joshua", new UnbeatableStrategy());
 		final Game game = new Game(humanPlayer, computerPlayer);
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("TicTacToe.fxml"));
