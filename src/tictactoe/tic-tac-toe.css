@@ -12,6 +12,11 @@
 
 .tic-tac-toe-board > .board-grid {
 	-fx-background-color: darkgreen ;
+	-fx-border-color: transparent ;
+}
+
+.tic-tac-toe-board .hint {
+	-fx-border-color: khaki ;
 }
 
 .tic-tac-toe-board .label:disabled {

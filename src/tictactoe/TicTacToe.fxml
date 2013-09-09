@@ -24,6 +24,7 @@
 					<MenuItem text="Human plays first" onAction="#newGameHumanFirst"/>
 					<MenuItem text="Computer plays first" onAction="#newGameComputerFirst"/>
 				</Menu>
+				<MenuItem text="hint" fx:id="hintMenuItem" onAction="#hint"/>
 				<MenuItem text="Quit" onAction="#quit"/>
 			</Menu>
 		</MenuBar>

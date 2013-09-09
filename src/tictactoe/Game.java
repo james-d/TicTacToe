@@ -9,6 +9,7 @@ import javafx.beans.binding.ObjectBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
@@ -64,6 +65,7 @@ public class Game {
 	private final Player xPlayer ;
 	private final ReadOnlyObjectWrapper<Player> currentPlayer ;
 	private final ReadOnlyObjectWrapper<GameStatus> gameStatus ;
+	private final ObjectProperty<Location> hint ;
 	private final List<List<ReadOnlyObjectWrapper<SquareState>>> board ;
 	
 	/**
@@ -93,6 +95,7 @@ public class Game {
 			}
 			
 		});
+		this.hint = new SimpleObjectProperty<Location>(this, "hint");
 		
 		createGameStatusBinding();
 	}
@@ -179,7 +182,7 @@ public class Game {
 		return squareProperty(new Location(column, row));
 	}
 	public SquareState getSquare(int column, int row) {
-		return board.get(column).get(row).get();
+		return getSquare(new Location(column, row));
 	}
 	
 	/**
@@ -191,6 +194,19 @@ public class Game {
 	}
 	public GameStatus getGameStatus() {
 		return gameStatus.get();
+	}
+	
+	/**
+	 * The square with the hint (if any).
+	 */
+	public ObjectProperty<Location> hintProperty() {
+		return hint ;
+	}
+	public Location getHint() {
+		return hint.get();
+	}
+	public void setHint(Location hint) {
+		this.hint.set(hint);
 	}
 	
 	/** 
@@ -231,6 +247,7 @@ public class Game {
 				currentPlayer.set(xPlayer);
 			}
 		}
+		hint.set(null);
 	}
 	
 	/**
@@ -247,6 +264,7 @@ public class Game {
 				square.set(SquareState.EMPTY);
 			}
 		}
+		hint.set( null );
 		currentPlayer.set(firstPlayer);
 	}
 	
